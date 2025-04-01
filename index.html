@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Mortgage repayment calculator</title>
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="form-wrapper">
+        <h2>Mortgage Calculator</h2>
+        <form class="form_items" id="mortgage-form" novalidate>
+          <button class="button-reset" type="reset">Clear All</button>
+
+          <label for="amount">Mortgage Amount</label>
+
+          <div id="mortgage_amount" class="amount hover-1">
+            <div class="inputsign" id="inputsign">$</div>
+            <input type="number" id="amount"  required />
+          </div>
+          <div class="red" id="amount_error"></div>
+          <div class="mort_rate_wrapper">
+            <div class="label_rate">
+              <label for="term">Mortgage Term</label>
+              <div class="term hover-1" id="mortgage-term">
+                <input type="number" id="term" required />
+                <div class="inputsign2" id="inputsign2">Years</div>
+              </div>
+              <div class="red" id="term_error"></div>
+            </div>
+            <div class="label_rate">
+              <label for="rate">Interest Rate</label>
+              <div class="rate hover-1" id="mortgage-rate">
+                <input type="number" step="0.01" id="rate" required />
+                <div class="inputsign2" id="inputsign-rate">%</div>
+              </div>
+              <div class="red" id="rate_error"></div>
+            </div>
+          </div>
+          <label>Mortgage Type</label>
+          <div class="repaymentType">
+            <div class="repayment hover-2">
+              <input
+                type="radio"
+                id="repayment"
+                name="type"
+                value="repayment"
+              />
+              <label for="repayment" class="label_type">Repayment</label>
+            </div>
+            <div class="interestOnly">
+              <input
+                type="radio"
+                id="interestOnly"
+                name="type"
+                value="interestOnly"
+              />
+              <label for="interestOnly" class="label_type">Interest Only</label>
+            </div>
+            <div class="red" id="type_error" ></div>
+            <button type="button" id="calculate-button">
+              Calculate Repayments
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="results_wrapper">
+        <div class="results_here" id="results">
+          <img src="/assets/images/illustration-empty.svg" alt="" />
+          <h3>Results shown here</h3>
+          <p>
+            Complete the form and click “calculate repayments” to see what your
+            monthly repayments would be.
+          </p>
+        </div>
+        <div class="results" id="resultsDisplay">
+          <div class="results_intro">
+            <h3>Your results</h3>
+            <p>
+              Your results are shown below based on the information you provided.
+              To adjust the results, edit the form and click “calculate
+              repayments” again.
+            </p>
+          </div>
+          <div class="results_details">
+            <p>Your monthly repayments</p>
+            <div id="monthly-repayments"></div>
+            <p>Total you'll repay over the term</p>
+            <div id="total-repay"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+      </div>
+        <div class="attribution outline-red">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Stephen Petersen</a>.
+        </div>
+      </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
