@@ -265,7 +265,7 @@ button:hover {
   content: "$";
 }
 
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   :root {
     --border-radius: 0.7rem;
   }
