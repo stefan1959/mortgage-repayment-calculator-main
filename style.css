@@ -61,6 +61,7 @@ h3 {
   gap: 1rem;
   padding: 1rem;
 }
+
 .form_items {
   display: grid;
   gap: 0.5rem;
@@ -271,6 +272,10 @@ button:hover {
   body {
     display: grid;
     place-items: center;
+  }
+  .form-header {
+    display: flex;
+    justify-content: space-between;
   }
   .container {
     /* outline: 2px solid red; */
